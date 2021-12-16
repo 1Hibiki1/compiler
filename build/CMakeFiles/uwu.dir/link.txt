@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/uwu.dir/src/main.c.o CMakeFiles/uwu.dir/src/util/generic/vector.c.o -o uwu 
