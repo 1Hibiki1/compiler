@@ -1,4 +1,0 @@
-/home/hibiki/Projects/compiler/build/CMakeFiles/tests.dir
-/home/hibiki/Projects/compiler/build/CMakeFiles/uwu.dir
-/home/hibiki/Projects/compiler/build/CMakeFiles/edit_cache.dir
-/home/hibiki/Projects/compiler/build/CMakeFiles/rebuild_cache.dir
