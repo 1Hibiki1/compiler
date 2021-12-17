@@ -26,6 +26,6 @@ void variant_set_payload(variant_t v, void* payload){
 }
 
 void variant_free(variant_t v, void (*free_function)(void*)){
-    free_function(v->payload);
+    if(free_function != NULL) free_function(v->payload);
     free(v);
 }
