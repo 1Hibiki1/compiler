@@ -5,12 +5,6 @@
 
 size_t tests_run = 0;
 
-/*static char* test_vector_new(){
-    vector_t v = vector_new();
-    mu_assert("TEST FAILED: vector_new returned NULL", v != NULL);
-    return 0;
-}*/
-
 static char* all_tests(){
     mu_run_test(test_vector_new);
     mu_run_test(test_vector_push);
@@ -28,7 +22,7 @@ int main(){
     else {
         printf("ALL TESTS PASSED\n");
     }
-    printf("Tests run: %d\n", tests_run);
+    printf("Tests run: %zu\n", tests_run);
 
     return result != 0;
 }
