@@ -2,6 +2,8 @@
 #include "../../src/util/generic/vector.c"
 
 static char* test_vector_new(){
+    printf("running test_vector_new...\n");
+
     vector_t v = vector_new();
     mu_assert("TEST FAILED: new vector's size is not 0", (v->size) == 0);
     mu_assert("TEST FAILED: new vector's max_len is not MIN_LEN", (v->max_len) == MIN_LEN);
@@ -10,6 +12,8 @@ static char* test_vector_new(){
 }
 
 static char* test_vector_push(){
+    printf("running test_vector_push...\n");
+
     vector_t v = vector_new();
     int i = 5;
     vector_push(v, &i);
@@ -41,6 +45,8 @@ static char* test_vector_push(){
 }
 
 static char* test_vector_len(){
+    printf("running test_vector_len...\n");
+
     vector_t v = vector_new();
     int i = 5;
     vector_push(v, &i);
@@ -64,6 +70,8 @@ static char* test_vector_len(){
 }
 
 static char* test_vector_pop(){
+    printf("running test_vector_pop...\n");
+
     vector_t v = vector_new();
     int i = 5;
 
@@ -92,6 +100,8 @@ static char* test_vector_pop(){
 }
 
 static char* test_vector_free(){
+    printf("running test_vector_free...\n");
+
     // TODO: better tests?
 
     int* i = malloc(sizeof(int));
