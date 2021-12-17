@@ -41,14 +41,66 @@ static char* test_vector_push(){
 }
 
 static char* test_vector_len(){
+    vector_t v = vector_new();
+    int i = 5;
+    vector_push(v, &i);
+
+    mu_assert("TEST FAILED: length not incremented", v->size == 1);
+
+    vector_push(v, &i);
+    vector_push(v, &i);
+    vector_push(v, &i);
+    vector_push(v, &i);
+    vector_push(v, &i);
+    vector_push(v, &i);
+    vector_push(v, &i);
+    vector_push(v, &i);
+    vector_push(v, &i);
+    vector_push(v, &i);
+
+    mu_assert("TEST FAILED: length not set correctly", v->size == 11);
+
     return 0;
 }
 
 static char* test_vector_pop(){
+    vector_t v = vector_new();
+    int i = 5;
+
+    vector_push(v, &i);
+    int* popped_item = vector_pop(v);
+
+    mu_assert("TEST FAILED: pop did not set size correctly", v->size == 0);
+    mu_assert("TEST FAILED: pop did not return popped element", (popped_item != NULL && (*popped_item) == 5));
+
+    vector_push(v, &i);
+    vector_push(v, &i);
+    vector_push(v, &i);
+    vector_push(v, &i);
+    vector_push(v, &i);
+    vector_push(v, &i);
+    vector_push(v, &i);
+    vector_push(v, &i);
+    vector_push(v, &i);
+    vector_push(v, &i);
+    vector_push(v, &i);
+
+    i = 11;
+    popped_item = vector_pop(v);
+    mu_assert("TEST FAILED: pop did not return popped element", (popped_item != NULL && (*popped_item) == 11));
     return 0;
 }
 
 static char* test_vector_free(){
+    // TODO: better tests?
+
+    int* i = malloc(sizeof(int));
+    *i = 7;
+
+    vector_t v = vector_new();
+    vector_push(v, i);
+
+    vector_free(v, free);
     return 0;
 }
 

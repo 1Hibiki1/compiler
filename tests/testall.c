@@ -11,6 +11,8 @@ static char* all_tests(){
     mu_run_test(test_vector_pop);
     mu_run_test(test_vector_len);
     mu_run_test(test_vector_free);
+    printf("All tests for vector passed\n");
+
     return 0;
 }
 
