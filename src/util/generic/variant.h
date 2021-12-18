@@ -5,6 +5,9 @@
 typedef enum {
     VAR_NONE,
     VAR_INT,
+    VAR_FLOAT,
+    VAR_DOUBLE,
+    VAR_CHAR,
     VAR_STRING
 } _VAR_TYPE;
 

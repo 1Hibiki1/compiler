@@ -6,5 +6,5 @@ file(GLOB_RECURSE SOURCES_UTIL RELATIVE ${CMAKE_SOURCE_DIR} "src/util/*.c")
 #SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
 
 add_executable(tests tests/testall.c)
-add_executable(uwu ${SOURCES})
+add_executable(compiler ${SOURCES})
 
